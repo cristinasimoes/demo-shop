@@ -72,10 +72,13 @@ nav{
 /* HEADER SECTION */
 .header-section{
     height: 100vh;
-    background: url("media/banner1.jpg");
-    background-size: cover;
-    background-position: center;
     display: flex;
+}
+.bg-image{
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
 }
 .header-section .card{
     background-color: #2274a545;
