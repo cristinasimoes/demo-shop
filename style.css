@@ -11,14 +11,9 @@ body{
     font-family: 'Roboto', sans-serif;
     letter-spacing: 1px;
     background-color: white;
+    font-size: 16px;
 }
-ul{
-    margin-right: 20px;
-}
-li{
-    list-style: none;
-    padding: 10px;
-}
+
 a{
     text-decoration: none;
     color: black;
@@ -30,70 +25,84 @@ a:hover{
     padding-right: 10px;
 }
 /* NAV BAR */
-nav{
-    height: 80px;
-    width: 100vw;
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
 .logo{
     font-family: 'Caveat Brush', cursive;
-    font-size: 28px;
+    font-size: 30px;
     color: #2274A5;
-    padding: 20px;
+    padding: 10px;
+    margin: auto;
+}
+ul{
+    padding: 0;
+    margin: auto;
+}
+li{
+    list-style: none;
+    padding: 5px 10px;
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #3946487d;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    margin: -22px -168px;
-  }
-.dropdown-content a {
-    color: wheat;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
+nav{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
 }
-.dropdown-content a:hover {
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);;;
+.menu-nav{
+    display: flex;
 }
-.dropdown:hover .dropdown-content {
-    display: block;
+hr{
+    opacity: 0.3;
+    margin: 0 20px;
+}
+
+/* SHOP MENU */
+.shop-nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+}
+.shop-nav-menu{
+    display: flex;
+}
+.shop-nav-menu ul{
+    display: flex;
+    flex-direction: column;
+}
+.shop-nav button{
+    border: none;
+    background-color: white;
+    border: 1px solid gray;
+    height: 30px;
+    border-radius: 20px;
+    width: 230px;
+}
+
+input{
+    border: none;
+}
+input:focus {
+    outline:none;
+}
+form{
+    padding: 10px 0;
 }
 
 /* HEADER SECTION */
-.header-section{
-    height: 100vh;
-    display: flex;
-}
 .bg-image{
     display: block;
     width: 100vw;
-    height: 100vh;
+    height: 400px;
     object-fit: cover;
 }
 .header-section .card{
     background-color: #2274a545;
-    width: 231px;
-    height: 150px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    top: 470px;
     position: absolute;
-    bottom: 3vh;
+    padding: 10px 10px 15px 10px;
 }
 h3{
     color: wheat;
-    font-size: 23px;
+    font-size: 20px;
     letter-spacing: 3px;    
 }
 p{
@@ -110,57 +119,6 @@ p{
     border: none;
     font-family: 'Roboto', sans-serif;
     letter-spacing: 1px;
-}
-/* SHOP MENU */
-.shop-nav{
-    margin-top: 50px;
-}
-.first-row-nav{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.second-row-nav li{
-    float: left;
-}
-.second-row-nav{
-    margin-bottom: 80px;
-    display: flex;
-    justify-content: center;
-}
-.second-row-nav li{
-    padding: 10px 0;
-}
-.second-row-nav{
-    width: 82vw;
-    margin: auto;
-}
-.shop-nav a{
-    padding: 10px;
-}
-.shop-nav ul{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 0;
-    margin: 0;
-}
-.shop-nav button{
-    border: none;
-    background-color: white;
-    border: 1px solid gray;
-    height: 30px;
-    border-radius: 20px;
-    width: 280px;
-}
-form{
-    padding-top: 30px;
-}
-input{
-    border: none;
-}
-input:focus {
-    outline:none;
 }
 
 /* SHOP SECTION */
@@ -228,6 +186,16 @@ input:focus {
     font-weight: bold;
 }
 
+.btn-shop:hover{
+    width: 130px;
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all ease 0.5s;
+}
+.card:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    transition: all ease 0.5s;  
+}
 /* FOOTER */
 footer{
     padding: 10px 20px;
@@ -261,107 +229,57 @@ footer ul{
     text-align: center;
 }
 
-/* MEDIA QUERIES */
-@media only screen and (min-width: 554px) {
-    ul{
-        display: flex;
-    }
-    /* NAV */
+
+@media only screen and (min-width: 768px) {
     nav{
-        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
     }
-    .dropdown-content {
+    .logo{
         margin: 0;
     }
-    /* SHOP MENU */
-    .second-row-nav{
-        width: 100vw;
-        margin: auto;
+    .menu-nav{
+        margin: 0;
+        align-items: center;
     }
-    /* SHOP SECTION */
-    .first-row, .second-row{
+    .shop-nav-menu ul{
         display: flex;
         flex-direction: row;
-        align-items: center;
+    }
+    .bg-image{
+        height: 300px;
+    }
+    .header-section .card{
+        top: 249px;
+    }
+    
+    .first-row, .second-row {
+        flex-direction: row;
         justify-content: center;
     }
-    .shop-section .card{
-        width: 188px;
+    .shop-section .card {
+        width: 200px;
     }
-    /* FOOTER */
-    .faq, .demo-shop{
-        display: block;
-    }
-    .contact{
-        margin: inherit;
-        text-align: left;
-    }
-  }
+}
 
-@media only screen and (min-width: 832px) {
-    /* HEADER SECTION */
+@media only screen and (min-width: 1024px) {
     .header-section .card{
-        background-color: #7e8a8b33;
-        width: 281px;
-        height: 150px;
-        left: 20px;
-        bottom: 20vh;
+        margin-left: 20px;
+
     }
-    h3{
-        font-size: 23px;
-        color: #0f4769;
-        letter-spacing: 3px;    
-    }
-    p{
-        color: #0f4769;
-    }
-    /* SHOP MENU */
-    .shop-nav ul{
-        display: flex;
+    .shop-nav {
         flex-direction: row;
-        align-items: center;
-        padding: 20px 0;
-        margin: 0;
+        justify-content: space-between;
+        padding: 10px 20px;
     }
-    /* SHOP SECTION */
-    .shop-section{
+    .shop-section {
+        /* display: flex; */
         flex-direction: row;
     }
-    .first-row, .second-row{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .header-section .card {
+        width: 300px;
+        padding: 10px 10px 15px 20px;
+
     }
-    .btn-shop{
-        background-color: #0f4769;
-        width: 130px;
-        height: 40px;
-        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-        color: wheat;
-        border-radius: 20px;
-        border: none;
-    }
-    .btn-shop:hover{
-        width: 130px;
-        cursor: pointer;
-        transform: scale(1.1);
-        transition: all ease 0.5s;
-    }
-    .card:hover {
-        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-        transition: all ease 0.5s;  
-    }
+
 }
-
-@media only screen and (min-width: 1000px) {
-    .first-row, .second-row{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-}
-
-
-
-
-
