@@ -30,7 +30,6 @@ a:hover{
     font-size: 30px;
     color: #2274A5;
     padding: 10px;
-    margin: auto;
 }
 ul{
     padding: 0;
@@ -46,20 +45,30 @@ nav{
     flex-direction: column;
     padding: 10px;
 }
+.nav-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.icon-burger{
+    padding: 10px;
+}
 .menu-nav{
     display: flex;
 }
 hr{
     opacity: 0.3;
     margin: 0 20px;
+    display: none;
 }
 
 /* SHOP MENU */
 .shop-nav{
-    display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px 0;
+    display: none;
 }
 .shop-nav-menu{
     display: flex;
@@ -96,7 +105,7 @@ form{
 }
 .header-section .card{
     background-color: #2274a545;
-    top: 470px;
+    top: 329px;
     position: absolute;
     padding: 10px 10px 15px 10px;
 }
@@ -126,7 +135,6 @@ p{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* margin: 60px 0; */
     margin: 9px 0 60px 0;
 
 }
@@ -230,7 +238,17 @@ footer ul{
 }
 
 
+
 @media only screen and (min-width: 768px) {
+    .shop-nav{
+        display: flex;
+    }
+    .icon-burger{
+        display: none;
+    }
+    hr{
+        display: block;
+    }
     nav{
         flex-direction: row;
         justify-content: space-between;
